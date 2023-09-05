@@ -1,0 +1,331 @@
+# let's me write notes, denoted by # symbol
+x = 10 #comments can also be used at the end of a line of code
+
+#strings used to represent text data. They are always enclosed in single quotes or 'double' "quotes"
+name = "Kali"
+
+#Integers (int), represent whole numbers without decimal places. Can be positive or negative
+age = 25
+
+#Floats(float) are used to represent decimal numbers. Crucial for data analysis
+pi = 3.14
+
+#lists (lists) are ordered items enclosed in square brackets []. 
+# They can contain elements of different types and the elements can be modified
+#lists are mutable, meaning you can change, add, or remove elements
+numbers = [1,2,3,4,5]
+
+#dictionaries(dict) store and retrieve values using unique keys.
+#key-value mapping: creating mapping between keys and their associated values
+#ordered collections: dictionaries are now ordered, preserving the order of key-value pairs.
+person = {
+    "name": "john",
+    "age": 25,
+    "city": "New York"
+}
+
+#addition (+) is used to add two numbers together, works on integers, floats and complex numbers
+result = 2 + 3
+print(result) # output: 5
+
+#subtraction(-) is used to subtract one number from another
+result = 5 - 2
+print(result) # Output: 3
+
+#division(/) used to divide one number by another. By default python performs floating-point division (returns a decimal)
+result = 7/2
+print(result) # Output: 3.5
+
+#floor division(//) divides to the whole number. Discards the fractional part of the division result
+result = 7//2
+print(result) # Output: 3
+
+#Modulus(%) finds the remainder when one number is divided by another
+result = 7 % 3
+print(result) # Output:1
+
+#Multiplication(*) operator is used to multiply two numbers
+results = 4*3
+print(result) # Output: 12
+
+#exponentiation(**) allows you make calculations using repeated multiplication (rises to a power)
+result = 2 ** 3
+print(result) # Output: 8
+
+#FLOW STATEMENTS
+
+#if statement executes code if the statement is true, code is skipped if false
+condition = True
+
+if condition:
+#executed if condition is true
+
+#elif statement is short for "else if" used to check an additional condition if the previous if statement or elif statements(if any)have evaluated to false.
+#if condition specified after elf is true, the code block following the elif statement is executed. You can have multiple elif statements in a row
+condition1 = False
+condition2 = True
+condition3 = False
+
+if condition1:
+    # executed if condition1 is true
+    print("condition 1 is true")
+elif condition2:
+    #executed if conditional1 is false and condition2 is true
+elif condition3:
+    #executed if condition1 and condition2 are false and condition3 is true
+    print("condition 1 and condition2 are false, but condition3 is true")
+else:
+    # executed if all conditions are false
+    print("all conditions are false")
+
+#else statement is used as a catch-all option if none of the preceding conditions in teh if or elif statements are true. 
+#does not have any conditions associated with it. Will execute if all previous conditions evaluate to false
+condition = true # or any condition that evaluates to a boolean value
+
+if condition:
+    #replace this comment with the code you want to execute if the condition is true
+    print("the condition is true")
+else:
+    #replace this comment with the code you want to execute if the condition is false
+    print("the condition is false")
+
+#LOOPS
+
+#for is used to start the loop statement
+#"placeholder" is a variable thats represents the current item being iterated in the loop (any variable name can represent teh items in the list)
+# "in" is used to specify the list or any iterable object you want to iterate over
+#"list" refers to the actual list or iterable object that you want to iterate through. Can be a list, tuple, set, or any other iterable
+fruits = ["apple", "banana", "orange"]
+
+for fruit in fruits:
+
+    print(fruit)
+
+# output
+
+apple
+banana
+orange
+
+#Index loop: for i in range(len(list)) loop
+
+#for i in range(len(list)) is an index-based loop that allows you to iterate over the indices of a list
+#Accessing elements: by using the expression list[i] within the loop, you can access and process each element in the list based on its index
+#performing operations: with the index loop, you can perform various operations on teh elements such as updating values, performing calculations, or applying conditional logic
+my_list = [10, 20, 30, 40, 50]
+for i in range(len(my_list)):
+
+    print(my_list[i])
+
+# output
+10
+20
+30
+40
+50
+
+#for key, value in dict.items() loop
+
+#"for" is a keyword used to start a loop
+#"key" and "value" are placeholder variables that will be assigned the key and vallue of each item in the dictionary during each iteration of the loop
+#dict is the dictionary you want to iteraate over
+#.items() is a method that returns a view object containing tuples of the dictionary's key-value pairs.
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+for key, value in my_dict.items():
+    print(key, value)
+
+# output
+a 1
+b 2
+c 3
+
+#FUNCTIONS
+
+#function definition: use the keyword def followed by teh function name and a a pair of parentheses
+#arguments: optional inputs, enclosed in the parentheses after the function name
+#function body: lines of code defining the tasks the function performs
+#function body: lines of code defining the tasks the functionperforms
+#return statement: if you need your function to return a result you need to use the keyword "return" that will specify the return value in the case of the example "7"
+def function_name(arguments):
+    #function body
+    #perform some tasks
+    #optionally, return a value
+
+def add_numbers(a, b):
+    sum = a + b
+    return sum
+
+#to test the output
+result = add_numbers(3, 4)
+print(result) #output: 7
+
+#built-in functions: range
+
+#range() function generates a sequence of numbers within a specified range
+#it takes up to three arguments: range(start,stop,step)
+#start(optional)specifies teh starting value of the range (default is 0)
+#stop(required)specifies the ending value of the range(excluded from the sequence)
+#step(optional) specifies teh increment between values(default is 1)
+range(1, 10, 2)
+#returns a sequence of odd numbers
+#from 1 to 9
+1
+3
+5
+7
+9
+
+#built-in functions: input
+
+#the input() function allows you to interact with the user by accepting input from the keyboard
+#it prompts the user to enter a value, whic is returned as a string
+#you can optionally provide a string as an argument to display a prompt to the user
+name = input("enter your name: ")
+
+#built-in functions:
+
+#the type() function is used to determine the dadta type of a given object
+#it takes one argument and returns the type of the object
+
+type(10)
+
+#returns
+int
+
+type(10)
+
+#returns
+str
+
+#built-in functions:
+#len() function returns the length or a number of items in an object
+#it can be used with various types like strings, lists, tuples, dictionaries, etc
+len("hello")
+
+#returns
+5
+
+len([1,2,3,4])
+
+#returns
+4
+
+#Built-in Functions:
+
+#round() used to round a floating-point number to a specified number of decimals or the nearest whole number
+#it takes two arguments: round(number, digits).
+#number is the value to be rounded, and digits (optional) specifies the number of decimal places (default is 0)
+
+#DATA TYPE CONVERSION
+
+#to convert a string to an integer or float, use the int() and float() functions respectively
+#note: convrsion will raise a value error if the string contains non-numeric characters
+
+num_str = "42"
+
+#convert string to integer
+num_int = int(num_str)
+print(num_int) #output: 42
+print(type(num_int)) # output: <class 'int'>
+
+# convert string to float
+num_float = float(num_str)
+print(num_float) # output: 42
+print(type(num_float)) # output: <class 'float'>
+
+#integer/float to string conversion
+
+#to convert an integer or float to a string, you can use str() function
+num_str = "42"
+num_float = 3.14
+
+#convert integer to string
+num_str_int = str(num_str)
+print(num_str_int) # output: "42"
+print(type(num_str_int)) #output: "3.14"
+print(type(num_str_int)) #output: <class 'str'>
+
+#convert float to string
+num_str_float = str(num_float)
+print(num_str_float) # output: "3.14"
+print(type(num_str_float)) #output: <class 'str'>
+
+#integer/float to string formatting
+
+#if you need more control over the formatting of the resulting string, you can use the format() method or f-strings(formatted string literals)
+#note: examples "{:.2f}" specifies a formaat string that formats the float with two decimal places
+num_float=3.14
+
+#using format() method
+print(formatted_str) #output: "3.14"
+
+#using f-string
+formatted_str = f"{num_float:.2f}"
+print(formatted_str) #output: "3.14"
+
+#LOGICAL & PROCEDURAL
+
+#Logical Thinking
+#Logical thinking involves breaking down a problem into smaller logical steps and then solving it using a series of conditional statements and logical operations
+#Logical thinking is often implemented using control structures like conditionals(if-else statements) and loops
+
+#checking if a number is positive or negative
+num = int(input("enter a number: "))
+
+if num > 0:
+    print("The number is positive.")
+elif num < 0:
+    print("the number is negative.")
+else:
+    print("The number is zero.")
+
+#Procedural Thinking
+
+#Procedural thinking involves breaking down a problem into a series of ordered steps or procedures, where each step performs a specific task or operation.
+#Often implemented using functions, which allow you to encapsulate a set of instructions that can be reused
+
+#calculating the factorial of a number
+def factorial(n)
+    result = 1
+    for i in range(1, n+1):
+        result *=i
+    return result
+
+num = int(input("Enter a number: "))
+fact = factorial(num)
+print(f"The factorial of {num} is {fact}. ")
+
+#ERROR MESSAGES
+
+#TypeError
+#Traceback (most recent call last):: This line indicates the traceback, showing the sequence of funcation calls leadign up to the error
+#File "example.py", line 5, in <module>: This line specifies the file name (example.py) and the line number (5) where the error occurred
+#Result = 10/'2': This line shows the code that triggered the error
+#TpeError: Unsupported operand type(s) for /: 'int' and 'str': This line provides a description of the error
+
+#example of errors
+#Traceback (most recent call last):
+#File "example.py", line 5, in <module>
+#Result = 10/'2'
+#TypeError: unsupported operand type(s) for /:
+#'int' and 'str'
+
+#Syntaxt Error
+
+#File "example.py", line 3: This line specifies the file name (example.py) and the line number(3) where the error occurred
+#print("hello world!':) This line shows the code that triggered the error
+#result = 10/'2': This line shows the code that triggered teh error
+#syntaxError: EOL while scanning string literal: This line provides a description of the error
+
+#example:
+
+#File "example.py", line 3
+#Print("Hello, world!"'^
+#sytaxError: EOL while scanning string literal
+
+#NameError
+#Traceback(most recent call last):: This line indicates the traceback, showing the sequence of function calls leading up to the error
+#File"example.py", line 3, in greeting: This line specifies teh file name (example.py) and the line number (3) where the error occurred
+#Print(message): This line shows the code that triggered the error
+#NameError: name 'message' is not defined: This ine provides a description of the error
